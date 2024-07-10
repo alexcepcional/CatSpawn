@@ -38,6 +38,7 @@ header{
 }
 
 .logo{
+    padding-right: 20px;
     font-family: poppinsbold;
     float: left;
     color: #f5f5f5;
@@ -54,6 +55,8 @@ nav{
 }
 
 nav ul{
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
 
@@ -168,4 +171,54 @@ footer p{
     color: #508f8f;
     text-shadow: none;
     transition: all 0.3s;
+}
+
+/* INICIO DE MEDIA QUERIES */
+
+@media only screen and (max-width: 577px){
+    header{
+        display: flex;
+        flex-wrap: wrap;
+        height: 100px;
+        align-items: center;
+    }
+
+    nav ul{
+        word-spacing: 2px;
+    }
+
+    section{
+        margin: 20px;
+        display: flex;
+        flex-flow: wrap column;
+    }
+
+    .card, .card2, .card3{
+        margin-bottom: 20px;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 451px){
+    header{
+        display: flex;
+        flex-wrap: wrap;
+        height: 110px;
+        align-items: center;
+    }
+
+    nav ul{
+        word-spacing: 2px;
+    }
+
+    section{
+        margin: 20px;
+        display: flex;
+        flex-flow: wrap column;
+    }
+
+    .card, .card2, .card3{
+        margin-bottom: 20px;
+        width: 100%;
+    }
 }
