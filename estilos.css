@@ -29,6 +29,10 @@ body{
     min-height: 100%;
 }
 
+
+
+/*HEADER*/
+
 header{
     background-color: #a6cdcd;
     height: 70px;
@@ -77,6 +81,12 @@ nav a:hover{
     transition: all 0.3s;
 }
 
+/*FIN HEADER*/
+
+
+
+/*INDEX*/
+
 section{
     display: flex;
     justify-content: space-evenly;
@@ -88,36 +98,24 @@ section{
     border-radius: 4px;
     padding: 15px;
     background-color: #508f8f;
+    background-size: cover;
+    background-position: center;
+    color: whitesmoke;
+    text-shadow: 0 0 5px #508f8f;
+    width: 30%;
+    word-break: break-all
+}
+
+#card1{
     background-image: url(img/cat\ toy.png);
-    background-size: cover;
-    background-position: center;
-    color: whitesmoke;
-    width: 30%;
-    word-break: break-all
 }
 
-.card2{
-    border-radius: 4px;
-    padding: 15px;
-    background-color: #508f8f;
+#card2{
     background-image: url(img/cat\ clean.png);
-    background-size: cover;
-    background-position: center;
-    color: whitesmoke;
-    width: 30%;
-    word-break: break-all
 }
 
-.card3{
-    border-radius: 4px;
-    padding: 15px;
-    background-color: #508f8f;
+#card3{
     background-image: url(img/cat\ collar.png);
-    background-size: cover;
-    background-position: center;
-    color: whitesmoke;
-    width: 30%;
-    word-break: break-all
 }
 
 .card__title{
@@ -129,6 +127,8 @@ section{
 }
 
 .card__btn{
+    bottom: 0;
+    margin-top: auto;
     display: block;
     padding: 10px;
     background-color: hsl(180, 28%, 73%);
@@ -143,6 +143,51 @@ section{
     background-color: #508f8f;
     color: whitesmoke;
 }
+
+/*FIN INDEX*/
+
+
+
+/*PRODUCTOS*/
+
+#grids{
+    margin: 0px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 180px);
+    grid-template-areas:none;
+}
+
+.item{
+    margin: 0;
+    padding: 0;
+    border: 2px solid #a6cdcd;
+    background-size: cover;
+    background-position: center;
+}
+
+.limpieza{
+    background-image: url(img/limpieza.jpg);
+}
+
+.juguetes{
+    background-image: url(img/juguetes.jpg);
+}
+
+.alimento{
+    background-image: url(img/alimento.jpg);
+}
+
+.vestimenta{
+    background-image: url(img/dressedcat.jpg);
+}
+
+/*FIN PRODUCTOS*/
+
+
+
+/*FOOTER*/
 
 footer{
     height: 77px;
@@ -184,7 +229,11 @@ footer p{
     background-color: #508f8f;
 }
 
-/* INICIO DE MEDIA QUERIES */
+/*FIN FOOTER*/
+
+
+
+/*MEDIA QUERIES*/
 
 @media only screen and (max-width: 577px){
     header{
@@ -204,7 +253,7 @@ footer p{
         flex-flow: wrap column;
     }
 
-    .card, .card2, .card3{
+    .card{
         margin-bottom: 20px;
         width: 100%;
     }
