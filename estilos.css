@@ -7,6 +7,9 @@
     src: url(fonts/Poppins-Bold.ttf);
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Indie+Flower&display=swap');
+
+
 *{
     margin: 0;
     padding: 0;
@@ -22,6 +25,7 @@ html{
 }
 
 body{
+    background-color: rgb(71, 68, 68);
     background-image: url(img/bodywallp.png);
     background-size: cover;
     display: flex;
@@ -56,8 +60,9 @@ header{
 
 nav{
     float: right;
-    word-spacing: 5px;
+    word-spacing: 20px;
     font-size: large;
+    margin-right: 10px;
 }
 
 nav ul{
@@ -103,7 +108,6 @@ section{
     color: whitesmoke;
     text-shadow: 0 0 5px #508f8f;
     width: 30%;
-    word-break: break-all
 }
 
 #card1{
@@ -142,6 +146,7 @@ section{
 .card__btn:hover{
     background-color: #508f8f;
     color: whitesmoke;
+    transform: scale(1.03);
 }
 
 /*FIN INDEX*/
@@ -150,37 +155,57 @@ section{
 
 /*PRODUCTOS*/
 
-#grids{
-    margin: 0px;
-    padding: 0;
+.titulo{
+    font-family: poppinsbold;
+    font-size: 40px;
+    color: whitesmoke;
+    text-shadow: 5px 5px 0px #2e4444;
+    text-align: center;
+    margin-top: 27px;
+}
+
+.galeria{
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 180px);
-    grid-template-areas:none;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, 240px);
+    grid-gap: 15px;
+    margin: 20px;
 }
 
 .item{
-    margin: 0;
-    padding: 0;
-    border: 2px solid #a6cdcd;
+    margin: 0px;
+    border: 5px solid #508f8f;
     background-size: cover;
     background-position: center;
+    border-radius: 7px;
+    transition: all 0.5s;
 }
 
-.limpieza{
-    background-image: url(img/limpieza.jpg);
+.item1{
+    background-image: url(img/limpieza.png);
+    grid-column: 1/3;
+    grid-row: 1/2;
 }
 
-.juguetes{
+.item2{
     background-image: url(img/juguetes.jpg);
+    grid-column: 1/2;
 }
 
-.alimento{
+.item3{
     background-image: url(img/alimento.jpg);
 }
 
-.vestimenta{
+.item4{
     background-image: url(img/dressedcat.jpg);
+    grid-column: 3/4;
+    grid-row: -3/-1;
+}
+
+.item:hover{
+    border-color: #a6cdcd;
+    filter: opacity(100%);
+    transform: scale(1.02);
 }
 
 /*FIN PRODUCTOS*/
@@ -220,17 +245,23 @@ footer p{
     transition: all 0.3s;
 }
 
+/*FIN FOOTER*/
+
+
+
+/*SCROLLBAR*/
+
 ::-webkit-scrollbar{
     background-color: #a6cdcd;
     width: 10px;
 }
 
 ::-webkit-scrollbar-thumb{
-    background-color: #508f8f;
+    background-color: whitesmoke;
+    border-radius: 2px;
 }
 
-/*FIN FOOTER*/
-
+/*FIN SCROLLBAR*/
 
 
 /*MEDIA QUERIES*/
@@ -239,7 +270,7 @@ footer p{
     header{
         display: flex;
         flex-wrap: wrap;
-        height: 100px;
+        height: 120px;
         align-items: center;
     }
 
@@ -263,7 +294,61 @@ footer p{
     }
 }
 
-@media only screen and (max-width: 451px){
+@media only screen and (min-width: 480px) and (max-width: 800px){
+    header{
+        display: flex;
+        flex-wrap: wrap;
+        height: 110px;
+        align-items: center;
+    }
+
+    nav ul{
+        margin-left: 80px;
+    }
+
+    .galeria{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 180px);
+        margin: 10px;
+        grid-gap: 10px;
+    }
+
+    .item4{
+        grid-column: 2/3;
+        grid-row: -3/-1;
+    }
+}
+
+@media only screen and (max-width: 744px){
+    nav ul{
+        margin-left: 0px;
+    }
+}
+
+@media only screen and (max-width: 479px){
+    header{
+        display: flex;
+        flex-wrap: wrap;
+        height: 110px;
+        align-items: center;
+    }
+
+    .galeria{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 180px);
+    }
+
+    .item{
+        grid-column: 1/2;
+    }
+
+    .item4{
+        background-position: top;
+        grid-row: -2/-1;
+    }
+}
+
+@media only screen and (max-width: 455px){
     header{
         display: flex;
         flex-wrap: wrap;
