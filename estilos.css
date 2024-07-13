@@ -294,6 +294,70 @@ section{
 
 
 
+/*CONTACTO*/
+
+.formtitle{
+    font-size: larger;
+    font-weight: bold;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.formdesc{
+    text-align: center;
+    color: whitesmoke;
+    font-size: smaller;
+    margin-bottom: 10px;
+}
+
+form{
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.formcont{
+    align-self: center;
+    margin: 20px;
+    margin-bottom: 80px;
+    max-width: 400px;
+    background-color: #022F40;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.continpt{
+    width: 100%;
+    background-color: #a6cdcd;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: #508f8f solid 2px;
+    border-radius: 4px;
+    outline: none;
+}
+
+::placeholder{
+    color: #508f8f;
+}
+
+.btncont{
+    background-color: #508f8f;
+    color: whitesmoke;
+    text-shadow: 0 0 5px #022F40;
+    border:none;
+    border-radius: 3px;
+    padding: 5px 10px 5px 10px;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+.btncont:hover{
+    background-color: #407272;
+}
+
+/*FIN CONTACTO*/
+
+
+
 /*FOOTER*/
 
 footer{
