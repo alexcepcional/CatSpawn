@@ -15,17 +15,17 @@
     padding: 0;
     box-sizing: border-box;
     font-family: poppinslight;
+    scroll-behavior: smooth;
 }
 
 
 html{
     font-family: poppinslight;
-    scroll-behavior: smooth;
     height: 100%;
 }
 
 body{
-    background-color: rgb(71, 68, 68);
+    background-color: #022F40;
     background-image: url(img/bodywallp.png);
     background-size: cover;
     display: flex;
@@ -92,6 +92,10 @@ nav a:hover{
 
 /*INDEX*/
 
+h5, p{
+    text-shadow: 0 0 5px black;
+}
+
 section{
     display: flex;
     justify-content: space-evenly;
@@ -100,13 +104,14 @@ section{
 }
 
 .card{
+    box-shadow: 0 0 15px #40727298;
     border-radius: 4px;
     padding: 15px;
     background-color: #508f8f;
     background-size: cover;
     background-position: center;
     color: whitesmoke;
-    text-shadow: 0 0 5px #508f8f;
+    text-shadow: 0 0 5px #407272;
     width: 30%;
 }
 
@@ -159,7 +164,7 @@ section{
     font-family: poppinsbold;
     font-size: 40px;
     color: whitesmoke;
-    text-shadow: 5px 5px 0px #2e4444;
+    text-shadow: 5px 5px 0px #407272;
     text-align: center;
     margin-top: 27px;
 }
@@ -179,6 +184,7 @@ section{
     background-position: center;
     border-radius: 7px;
     transition: all 0.5s;
+    box-shadow: 0 0 15px #4072725b;
 }
 
 .item1{
@@ -209,6 +215,54 @@ section{
 }
 
 /*FIN PRODUCTOS*/
+
+
+
+/*SERVICIOS*/
+
+.serviciosection{
+    margin: 0px;
+}
+
+.card__servicios{
+    width: 20%;
+    height: auto;
+    margin: 20px;
+    padding: 0;
+    text-align: center;
+    border: 5px solid #a6cdcd;
+    transition: all 0.5s;
+}
+
+.card__servicios:hover{
+    transform: scale(1.05);
+}
+
+.card-title{
+    font-size: 25px;
+    margin-bottom: 15px;
+    font-family: poppinsbold;
+    text-shadow: 0 0 5px #407272;
+}
+
+.btn__serv{
+    display: block;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #a6cdcd;
+    color: whitesmoke;
+    text-decoration: none;
+    text-shadow: 0 0 5px #407272;
+    transition: all 0.5s;
+}
+
+.btn__serv:hover{
+    transform: scale(1.05);
+    color: whitesmoke;
+}
+
+/*FIN SERVICIOS*/
 
 
 
@@ -249,7 +303,7 @@ footer p{
 
 
 
-/*SCROLLBAR*/
+/*MISCELANEOS*/
 
 ::-webkit-scrollbar{
     background-color: #a6cdcd;
@@ -257,14 +311,46 @@ footer p{
 }
 
 ::-webkit-scrollbar-thumb{
-    background-color: whitesmoke;
+    background-color: #508f8f;
     border-radius: 2px;
 }
 
-/*FIN SCROLLBAR*/
+.subir{
+    background-color: #a6cdcd;
+    color: #508f8f;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    line-height: 30px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px#407272;
+    transition: all 0.5s;
+}
+
+.subir:hover{
+    background-color: #508f8f;
+    color: #a6cdcd;
+}
+
+/*FIN MISCELANEOS*/
 
 
 /*MEDIA QUERIES*/
+
+@media only screen and (max-width: 1040px){
+    .serviciosection{
+        display: flex;
+        flex-flow: wrap row;
+    }
+    
+    .card__servicios{
+        width: 40%;
+    }
+}
+
 
 @media only screen and (max-width: 577px){
     header{
