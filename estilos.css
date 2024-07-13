@@ -179,7 +179,7 @@ section{
 
 .item{
     margin: 0px;
-    border: 5px solid #508f8f;
+    border: 5px solid #407272;
     background-size: cover;
     background-position: center;
     border-radius: 7px;
@@ -225,6 +225,7 @@ section{
 }
 
 .card__servicios{
+    background-color: #a6cdcd;
     width: 20%;
     height: auto;
     margin: 20px;
@@ -250,7 +251,7 @@ section{
     text-align: center;
     border-radius: 5px;
     padding: 5px;
-    background-color: #a6cdcd;
+    background-color: #508f8f;
     color: whitesmoke;
     text-decoration: none;
     text-shadow: 0 0 5px #407272;
@@ -259,10 +260,37 @@ section{
 
 .btn__serv:hover{
     transform: scale(1.05);
+    background-color: #407272;
     color: whitesmoke;
 }
 
 /*FIN SERVICIOS*/
+
+
+
+/*NOSOTROS*/
+
+.nosdesc{
+    border: #a6cdcd solid 4px;
+    padding: 20px;
+    margin-top: 20px;
+    bottom: 0px;
+    color: whitesmoke;
+    background-color: #022F40;
+    background-image: url(img/catbanner.png);
+    background-size: cover;
+    background-position: left;
+}
+
+.nosdesc h5{
+    font-weight: bold;
+}
+
+.parnos2{
+    margin: 0;
+}
+
+/*FIN NOSOTROS*/
 
 
 
